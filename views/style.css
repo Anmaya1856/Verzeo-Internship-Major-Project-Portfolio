@@ -1,0 +1,1123 @@
+body,
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* --------------------- Navigation Bar -----------------------------*/
+
+.navbar {
+  /*overflow: hidden;*/
+  position: fixed;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(1px);
+  font-family: 'Chivo', sans-serif;
+  width: 100%;
+  z-index: 100;
+}
+
+.navbar a {
+  float: right;
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: 2% 1.7%;
+  text-decoration: none;
+  /*font-size: 1.25vw;*/
+  font-size: 20px;
+  color: white;
+}
+
+.navbar h1 {
+  border: medium;
+  display: block;
+  float: left;
+  color: white;
+  text-align: center;
+  /*font-size: 2.2vw;*/
+  padding: 0% 2.5%;
+}
+
+.navbar a:hover,
+.dropdown:hover {
+  /*text-decoration: underline;
+			text-decoration-color: black;
+			background-color: #1E619E;*/
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 5px solid #ffffff;
+  transition: 0.5s;
+}
+
+.navbar .scrolled {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.dropdown {
+  float: right;
+  text-decoration: none;
+  padding: 1.8% 1.7% 0%;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  position: relative;
+  float: left;
+  margin: auto;
+  background-color: inherit;
+  font-family: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  opacity: 0;
+  position: relative;
+  margin: 40px -25px 0px;
+  background-color: transparent;
+  min-width: 160px;
+  /*box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);*/
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: white;
+  text-decoration: none;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  /*background-color: #ddd;*/
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 800px) {
+	.navbar a{
+		font-size: 15px;
+	}
+	.navbar h1{
+		font-size: 20px;
+	}
+	.dropdown .dropbtn a{
+  font-size: 15px !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.navbar a{
+		font-size: 13px;
+	}
+	.navbar h1{
+		font-size: 17px;
+	}
+	.dropdown .dropbtn a{
+  font-size: 13px !important;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.navbar a{
+		font-size: 11px;
+	}
+	.navbar h1{
+		font-size: 14px;
+	}
+	.dropdown .dropbtn a{
+  font-size: 11px !important;
+	}
+	.dropdown{
+		width: 60px !important;
+	}
+}
+
+
+/*.navbar .icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}*/
+
+/*----------------------- Home Page (Hero Image) ----------------------*/
+
+.hero {
+  background-image: url('Assets/Hero_Image.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  top: 50%;
+  font-family: 'Playfair Display', serif;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
+.scroll_down {
+  position: absolute;
+  background-color: transparent;
+  padding: 20px;
+  text-decoration: none;
+  top: 95%;
+  font-family: 'Chivo', sans-serif;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px) {
+  .centered {
+    font-size: 70px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .centered {
+    font-size: 30px !important;
+	  border: 5px solid white !important;
+  }
+	
+	.scroll_down img{
+		width: 30px !important;
+	}
+}
+
+/*------------------------- About ----------------------------*/
+
+.main {
+  margin: 0% 0%;
+  padding: 6% 0%;
+  /*background-color: #e1b382;*/
+  background-color: rgb(225, 179, 130, 0.7);
+}
+
+.main p {
+  font-size: 20px;
+  margin: auto;
+  width: 70%;
+}
+
+.flex_container {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  padding-top: 2%;
+  align-items: center;
+}
+
+@media screen and (max-width: 1110px) {
+  .flex_container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 550px) {
+	.main h1{
+		font-size: 20px;
+	}
+	.main h3{
+		font-size: 17px;
+	}
+	.main p{
+		font-size: 14px;
+	}
+	.flex_container img{
+		width: 300px;
+	}
+}
+
+/*------------------------- Portfolio ----------------------------*/
+
+.hero_portfolio {
+  background-image: url('Assets/Portfolio.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered_portfolio {
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 10%;
+  font-family: 'Playfair Display', serif;
+  /*width: 40%;*/
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mySlides {
+  display: none;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 1000px;*/
+  max-width: 80%;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 5px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 5s;
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .centered_portfolio {
+    font-size: 70px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .centered_portfolio {
+    font-size: 30px !important;
+	  border: 5px solid white !important;
+	}
+}
+
+/*------------------------- Products ----------------------------*/
+
+.hero_products {
+	background-image: url("Assets/Products_Hero.jpg");
+	height: 100%; 
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+  }
+  .centered_products {
+	position: relative;
+	text-align: center;
+	background-color: rgba(0,0,0, 0.4);
+	padding: 20px 10%;
+	font-family: 'Playfair Display', serif;
+	/*width: 40%;*/
+	display: inline-block;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cards
+{
+	display: flex;
+	width : 100%;
+    height : 100vh;
+    align-items : center;
+    justify-content : center;
+    overflow : hidden;
+    
+}
+
+.card
+{
+    margin: 2vw;
+    display : grid;
+    grid-template-columns: 18vw;
+    grid-template-rows: 25vh 25vh 10vh;
+    grid-template-areas: "image" "text" "stats";
+
+    font-family: 'Chivo', sans-serif;
+    border-radius: 1em;
+    background: white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+    text-align: center;
+
+    transition: 0.5s ease;
+}
+
+.card-image1
+{
+    grid-area: image;
+    background: url("Assets/CoffeeTable.png");
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-size: cover;
+}
+.card-image2
+{
+    grid-area: image;
+    background: url("Assets/Chair1.png");
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-size: cover;
+}
+.card-image3
+{
+    grid-area: image;
+    background: url("Assets/Sofa.png");
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-size: cover;
+}
+.card-image4
+{
+    grid-area: image;
+    background: url("Assets/Bookshelf.png");
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-size: cover;
+}
+.card-text
+{
+    grid-area: text;
+    margin: 2vw;
+}
+.card-text .date
+{
+    color: rgb(255, 7, 110);
+    font-size: 0.7em;
+}
+.card-text p
+{
+    color: grey;
+    font-size: 1em;
+    font-weight: 300;
+}
+.card-text h2
+{
+    margin-top: 0px;
+    font-size: 1.5em;
+
+}
+.card-stats
+{
+    text-decoration: none;
+    grid-area: stats;
+    background: rgba(0,0,0, 0.2);
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+}
+.card-stats a
+{
+    text-decoration: none;
+    color: black;
+    font-size: 13px;
+    transition: font-size 0.1s;
+}
+.card-stats a:hover
+{
+    font-size: 17px;
+}
+.card-stats .value
+{
+    margin-top: 25px;
+}
+.card:hover
+{
+    transform: scale(1.2);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+@media screen and (max-width: 1100px) {
+  .cards {
+    flex-direction: column;
+	  flex: 100%;
+	  height: 100%;
+  }
+	.card
+	{
+		margin: 2vw;
+		display : grid;
+		
+		grid-template-columns: 40vw;
+		grid-template-rows: 25vh 25vh 10vh;
+		grid-template-areas: "image" "text" "stats";
+
+		font-family: 'Chivo', sans-serif;
+		border-radius: 1em;
+		background: white;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+		text-align: center;
+
+		transition: 0.5s ease;
+	}
+}
+
+@media screen and (max-width: 700px) {
+  .cards {
+    flex-direction: column;
+	  flex: 100%;
+	  height: 110%;
+  }
+	.card
+	{
+		margin: 2vw;
+		display : grid;
+		
+		grid-template-columns: 50vw;
+		grid-template-rows: 25vh 25vh 10vh;
+		grid-template-areas: "image" "text" "stats";
+
+		font-family: 'Chivo', sans-serif;
+		border-radius: 1em;
+		background: white;
+		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+		text-align: center;
+
+		transition: 0.5s ease;
+	}
+}
+
+@media screen and (max-width: 800px) {
+  .centered_products {
+    font-size: 70px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .centered_products {
+    font-size: 30px !important;
+	  border: 5px solid white !important;
+	}
+	.cards h2{
+		font-size: 17.5px !important;
+	}
+	.cards p{
+		font-size: 14px !important;
+	}
+}
+
+/*------------------------- Contact Us ----------------------------*/
+
+.hero_contact_us {
+  background-image: url('Assets/Contact_Us.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered_contact_us {
+  position: relative;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px 10%;
+  font-family: 'Playfair Display', serif;
+  /*width: 40%;*/
+  display: inline-block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main label {
+  display: block;
+  text-align: center;
+  margin: auto;
+  font-size: 20px;
+  font-family: 'Chivo', sans-serif;
+}
+
+.main input {
+  display: block;
+  margin: auto;
+  height: 20px;
+  font-family: 'Chivo', sans-serif;
+}
+
+.main textarea {
+  width: 30%;
+  display: block;
+  margin: auto;
+}
+
+::placeholder {
+  color: black;
+  font-size: 20px;
+  font-family: 'Judson', serif;
+}
+
+@media screen and (max-width: 800px) {
+  .centered_contact_us {
+    font-size: 70px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .centered_contact_us {
+    font-size: 30px !important;
+	  border: 5px solid white !important;
+	}
+	.main label
+	{
+		font-size: 14px;
+	}
+	.main input{
+		font-size: 14px;
+		height: 14px;
+		width: 50% !important; 	
+	}
+	.main textarea{
+		width:50% !important;
+	}
+	::placeholder{
+		font-size: 14px;
+	}
+}
+
+/*------------------------- Footer ----------------------------*/
+
+.footer {
+  margin: 0% 0%;
+  padding: 2% 2%;
+  /*background-color: #e1b382;*/
+  background-color: darkcyan;
+  color: white;
+}
+
+.footer ul {
+  display: inline-block;
+  float: right;
+}
+
+.footer a {
+  float: right;
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: 2% 1.7%;
+  text-decoration: none;
+  /*font-size: 1.25vw;*/
+  font-size: 20px;
+  color: white;
+}
+
+.navbar h1 {
+  border: medium;
+  display: block;
+  float: left;
+  color: white;
+  text-align: center;
+  /*font-size: 2.2vw;*/
+  padding: 0% 2.5%;
+}
+
+.flex_container_footer {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+#sticky-footer {
+  flex-shrink: none;
+}
+
+
+@media screen and (max-width: 1110px) {
+  .flex_container_footer {
+    flex-direction: column;
+	  width: 100% !important;
+  }
+	#footer_nav {
+		width: 100% !important;
+		margin: auto !important;
+		padding: 0 !important;
+		float: left !important;
+		margin-right:  20% !important;
+	}
+	#footer_icon{
+		width: 100% !important;
+	}
+}
+
+@media screen and (max-width: 600px) {
+  .flex_container_footer h1{
+    font-size: 20px !important;
+  }
+	#footer_nav {
+		width: 100% !important;
+		margin: auto !important;
+		padding: 0 !important;
+		float: left !important;
+		margin-right:  20% !important;
+		
+	}
+	.flex_container_footer a{
+		font-size: 14px !important;
+	}
+	
+	#footer_icon{
+		width: 100% !important;
+	}
+	.flex_container_footer img{
+		width: 18px !important;
+		height: 18px !important;
+		
+	}
+	#footer_copyright{
+		font-size: 10px !important;
+	}
+}
+
+@media screen and (max-width: 450px) {
+  .flex_container_footer h1{
+    font-size: 15px !important;
+  }
+	#footer_nav {
+		width: 100% !important;
+		margin: auto !important;
+		padding: 0 !important;
+		float: left !important;
+		margin-right:  20% !important;
+		
+	}
+	.flex_container_footer a{
+		font-size: 13px !important;
+	}
+	
+	#footer_icon{
+		width: 100% !important;
+	}
+	.flex_container_footer img{
+		width: 15px !important;
+		height: 15px !important;
+		
+	}
+	#footer_copyright{
+		font-size: 8px !important;
+	}
+}
+
+/*-----------------Chairs----------------------*/
+
+.hero_chair {
+  background-image: url('Assets/Chair2.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered_chair {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  top: 50%;
+  font-family: 'Playfair Display', serif;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+	padding-top: 3.5%;
+  display: block;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+	font-size: 20px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 80px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+	z-index: 1000;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+	z-index: 1000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .centered_chair {
+    font-size: 70px !important;
+  }
+	.close{
+		padding-top: 35px !important;
+	}
+	.modal-content{
+		padding-top: 20%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+  .centered_chair {
+    font-size: 30px !important;
+	  border: 5px solid white !important;
+  }
+	
+	.scroll_down img{
+		width: 30px !important;
+	}
+}
+
+/*-------------------------Bookshelve------------------------------*/
+
+.hero_bookshelf {
+  background-image: url('Assets/Bookshelf_hero.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered_bookshelf {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  top: 50%;
+  font-family: 'Playfair Display', serif;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px) {
+  .centered_bookshelf {
+    font-size: 70px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .centered_bookshelf {
+    font-size: 30px !important;
+	  border: 5px solid white !important;
+  }
+	
+	.scroll_down img{
+		width: 30px !important;
+	}
+}
+
+/*-------------------------Coffee Table------------------------------*/
+
+.hero_coffee {
+  background-image: url('Assets/Coffee/monolith_table.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered_coffee {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  top: 50%;
+  font-family: 'Playfair Display', serif;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px) {
+  .centered_coffee {
+    font-size: 70px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .centered_coffee {
+    font-size: 30px !important;
+	  border: 5px solid white !important;
+  }
+	
+	.scroll_down img{
+		width: 30px !important;
+	}
+}
+
+/*-------------------------Sofa------------------------------*/
+
+.hero_sofa {
+  background-image: url('Assets/Sofa_Hero.jpg');
+  height: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.centered_sofa {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  top: 50%;
+  font-family: 'Playfair Display', serif;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 800px) {
+  .centered_sofa {
+    font-size: 70px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .centered_sofa {
+    font-size: 30px !important;
+	  border: 5px solid white !important;
+  }
+	
+	.scroll_down img{
+		width: 30px !important;
+	}
+}
+
+
+/*----------------------------------*/
